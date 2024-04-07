@@ -1,0 +1,110 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Villa Serenity",
+      "segment_name": "Luxury Villas",
+      "description": "Experience unparalleled tranquility in this exquisite villa nestled amidst lush greenery.",
+      "price": "$5,500,000",
+      "status": "sale",
+      "area": "8000 sqft",
+      "location": "Los Angeles, California",
+      "image_url": "https://example.com/villa_serenity.jpg",
+      "facilities": ["Spa", "Home theater", "Gym"]
+    },
+    {
+      "id": 2,
+      "estate_title": "Penthouse Royale",
+      "segment_name": "Luxury Apartments",
+      "description": "Indulge in opulence with stunning skyline views from this palatial penthouse.",
+      "price": "$3,200,000",
+      "status": "sale",
+      "area": "4000 sqft",
+      "location": "New York City, New York",
+      "image_url": "https://example.com/penthouse_royale.jpg",
+      "facilities": ["Private elevator", "Rooftop terrace","Fitness center"]
+    },
+    {
+      "id": 3,
+      "estate_title": "Oceanfront Oasis",
+      "segment_name": "Beachfront Properties",
+      "description": "Escape to paradise with this luxurious beachfront estate offering unparalleled ocean views.",
+      "price": "$7,800,000",
+      "status": "sale",
+      "area": "10000 sqft",
+      "location": "Miami Beach, Florida",
+      "image_url": "https://example.com/oceanfront_oasis.jpg",
+      "facilities": ["Private beach access", "Poolside cabanas", "Outdoor kitchen"]
+    },
+    {
+      "id": 4,
+      "estate_title": "Mansion Elysium",
+      "segment_name": "Luxury Mansions",
+      "description": "Live in splendor and grandeur in this magnificent mansion boasting timeless architectural design.",
+      "price": "$12,500,000",
+      "status": "rent",
+      "area": "15000 sqft",
+      "location": "Bel Air, California",
+      "image_url": "https://example.com/mansion_elysium.jpg",
+      "facilities": ["Tennis court", "Library", "Guest house"]
+    },
+    {
+      "id": 5,
+      "estate_title": "Chalet Alpine",
+      "segment_name": "Luxury Chalets",
+      "description": "Experience alpine luxury in this breathtaking chalet surrounded by majestic mountain views.",
+      "price": "$6,900,000",
+      "status": "sale",
+      "area": "6000 sqft",
+      "location": "Aspen, Colorado",
+      "image_url": "https://example.com/chalet_alpine.jpg",
+      "facilities": ["Outdoor hot tub", "Stone fireplace","Wine cellar"]
+    },
+    {
+      "id": 6,
+      "estate_title": "Sky Villa Vista",
+      "segment_name": "Luxury Sky Villas",
+      "description": "Live above the clouds in this spectacular sky villa offering unmatched panoramic city views.",
+      "price": "$9,750,000",
+      "status": "rent",
+      "area": "7000 sqft",
+      "location": "Dubai, UAE",
+      "image_url": "https://example.com/sky_villa_vista.jpg",
+      "facilities": ["Private helipad", "Sky garden", "Infinity pool"]
+    },
+    {
+      "id": 7,
+      "estate_title": "Lakefront Retreat",
+      "segment_name": "Luxury Lake Houses",
+      "description": "Escape to serenity with this luxurious lakefront retreat offering unparalleled privacy and tranquility.",
+      "price": "$4,300,000",
+      "status": "sale",
+      "area": "5500 sqft",
+      "location": "Lake Tahoe, Nevada",
+      "image_url": "https://example.com/lakefront_retreat.jpg",
+      "facilities": ["Boat dock", "Home theater", "Gym"]
+    },
+    {
+      "id": 8,
+      "estate_title": "Historic Manor Estate",
+      "segment_name": "Historic Estates",
+      "description": "Own a piece of history with this meticulously restored historic manor estate exuding old-world charm and elegance.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "18000 sqft",
+      "location": "Charleston, South Carolina",
+      "image_url": "https://example.com/historic_manor_estate.jpg",
+      "facilities": ["Formal gardens", "Ballroom", "Library"]
+    },
+    {
+      "id": 9,
+      "estate_title": "Mountain Retreat Haven",
+      "segment_name": "Mountain Retreats",
+      "description": "Embrace nature's beauty in this luxurious mountain retreat offering ultimate seclusion and relaxation.",
+      "price": "$3,900,000",
+      "status": "rent",
+      "area": "4500 sqft",
+      "location": "Whistler, Canada",
+      "image_url": "https://example.com/mountain_retreat_haven.jpg",
+      "facilities": ["Home theater", "Ski storage", "Gourmet kitchen"]
+    }
+  ]
