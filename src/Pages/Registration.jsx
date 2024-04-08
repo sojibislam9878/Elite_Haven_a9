@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 const Registion = () => {
   const {
     register,
@@ -8,10 +9,17 @@ const Registion = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
   const [isHide, setIsHide] = useState(false);
   const handleHide = () => {
     setIsHide(!isHide);
+  };
+  const {createUserWithEmail}=useAuth()
+
+  const onSubmit = (data) => {
+    createUserWithEmail(data.email, data.password)
+    .then(res=>{
+      console.log(res.user);
+    })
   };
   return (
     <div className="flex justify-center mt-10">

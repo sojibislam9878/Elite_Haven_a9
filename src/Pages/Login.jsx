@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 const Login = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  const onSubmit = (data) => console.log(data);
+const {login}=useAuth()
+  const onSubmit = (data) =>{
+    login(data.email, data.password)
+  };
   const [isHide, setIsHide] = useState(false);
   const handleHide = () => {
     setIsHide(!isHide);
