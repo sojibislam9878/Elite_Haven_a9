@@ -1,8 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {
+  GithubAuthProvider,
+  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
@@ -12,14 +15,13 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   // create user
   const createUserWithEmail = (email, password) => {
-    setLoading(true)
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const [loading , setLoading]=useState(true)
+  const [loading, setLoading] = useState(true);
   //   user
   const [user, setUser] = useState(null);
-  
 
   //   check user
   useEffect(() => {
@@ -27,24 +29,44 @@ const AuthProvider = ({ children }) => {
       if (user) {
         setUser(user);
       }
-      setLoading(false)
+      setLoading(false);
     });
   }, []);
 
   //   userlogin
   const login = (email, password) => {
-    setLoading(true)
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-// logout
-const logout=()=>{
-  setLoading(true)
-  setUser(null)
-    signOut(auth)
-}
-// values
-  const values = { createUserWithEmail, login , logout, user , loading};
+  // logout
+  const logout = () => {
+    setLoading(true);
+    setUser(null);
+    signOut(auth);
+  };
+
+  // social login providers
+
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+
+  const googleSignUP = () => {
+    signInWithPopup(auth, googleProvider);
+  };
+  const githubSignUP = () => {
+    signInWithPopup(auth, githubProvider);
+  };
+  // values
+  const values = {
+    createUserWithEmail,
+    login,
+    logout,
+    user,
+    loading,
+    googleSignUP,
+    githubSignUP,
+  };
   return (
     <div>
       <AuthContext.Provider value={values}>{children}</AuthContext.Provider>
@@ -53,7 +75,7 @@ const logout=()=>{
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.element.isRequired
-  };
-  
+  children: PropTypes.element.isRequired,
+};
+
 export default AuthProvider;

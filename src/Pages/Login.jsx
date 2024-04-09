@@ -1,25 +1,24 @@
 import { useState } from "react";
-import { useForm} from "react-hook-form";
-import { Link , useLocation, useNavigate} from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 const Login = () => {
-  const location= useLocation()
+  const location = useLocation();
   console.log(location);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-const {login}=useAuth()
-  const onSubmit = (data) =>{
-    login(data.email, data.password)
-    .then(res=>{
+  const { login, googleSignUP, githubSignUP } = useAuth();
+  const onSubmit = (data) => {
+    login(data.email, data.password).then((res) => {
       console.log(res);
-      navigate(location?.state ?location.state:"/")
-    })
+      navigate(location?.state ? location.state : "/");
+    });
   };
-  
+
   const [isHide, setIsHide] = useState(false);
   const handleHide = () => {
     setIsHide(!isHide);
@@ -46,15 +45,16 @@ const {login}=useAuth()
               {...register("password", { required: true })}
               className="w-full border-b-2 py-4 outline-none mt-6"
             />
-            <p className="absolute right-5 top-11 hover:cursor-pointer" onClick={handleHide}>
+            <p
+              className="absolute right-5 top-11 hover:cursor-pointer"
+              onClick={handleHide}
+            >
               {isHide ? (
                 <span className="material-symbols-outlined">
                   visibility_off
                 </span>
               ) : (
-                <span className="material-symbols-outlined">
-                  visibility
-                </span>
+                <span className="material-symbols-outlined">visibility</span>
               )}
             </p>
           </div>
@@ -70,10 +70,24 @@ const {login}=useAuth()
             className="btn w-full bg-blue-500 text-white text-lg"
           />
         </form>
-        <p className="text-center mt-6 mb-28 font-medium opacity-80 text-lg">
+        <p className="text-center mt-6 mb-8 font-medium opacity-80 text-lg">
           <span className="opacity-80">Do not have an account?</span>{" "}
-          <Link to="/registration"><span className="text-blue-500 font-bold">Register Here</span></Link>
+          <Link to="/registration">
+            <span className="text-blue-500 font-bold">Register Here</span>
+          </Link>
         </p>
+        <div className="divider">OR</div>
+        {/* social login */}
+        <div className="flex justify-center gap-8 mt-8 mb-16">
+          <button onClick={googleSignUP} className="btn flex items-center">
+            <img className="w-12" src="google.png" alt="" />
+            <p>Sign Up With Google</p>
+          </button>
+          <button onClick={githubSignUP} className="btn flex justify-between items-center">
+            <img className="w-7" src="github.png" alt="" />
+            <p>Sign Up With Google</p>
+          </button>
+        </div>
       </div>
     </div>
   );
