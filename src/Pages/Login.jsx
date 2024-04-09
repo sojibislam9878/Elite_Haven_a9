@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { useForm} from "react-hook-form";
+import { Link , useLocation, useNavigate} from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 const Login = () => {
+  const location= useLocation()
+  console.log(location);
+  const navigate=useNavigate()
   const {
     register,
     handleSubmit,
@@ -11,7 +14,12 @@ const Login = () => {
 const {login}=useAuth()
   const onSubmit = (data) =>{
     login(data.email, data.password)
+    .then(res=>{
+      console.log(res);
+      navigate(location?.state ?location.state:"/")
+    })
   };
+  
   const [isHide, setIsHide] = useState(false);
   const handleHide = () => {
     setIsHide(!isHide);

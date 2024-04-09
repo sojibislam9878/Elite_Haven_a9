@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 
 const useFetchData = () => {
     const [data, setData]=useState([])
-    const [loading , setLoading]=useState(true)
+    const [dataFecthing , setDataFecthing]=useState(true)
     useEffect(()=>{
-        setLoading(true)
+        setDataFecthing(true)
         const fetchData=async()=>{
             const res= await fetch('data.json')
             const data= await res.json()
             setData(data)
-            setLoading(false)
+            setDataFecthing(false)
         }
         fetchData()
     },[])
-    return {data, loading}
+    return {data, dataFecthing}
 };
 
 export default useFetchData;

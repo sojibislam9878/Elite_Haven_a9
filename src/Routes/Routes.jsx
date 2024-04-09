@@ -5,6 +5,7 @@ import Login from "../Pages/Login";
 import Registion from "../Pages/Registration";
 import UpdateProfile from "../Pages/UpdateProfile";
 import CardDetails from "../Pages/CardDetails";
+import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 // import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
         },
         {
             path:"/:id",
-            element:<CardDetails></CardDetails>,
+            element:<PrivetRoute><CardDetails></CardDetails></PrivetRoute>,
         },
       ]
     },
