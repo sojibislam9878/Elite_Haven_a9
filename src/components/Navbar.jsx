@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex  items-center gap-2">
-            <div className="flex tooltip tooltip-bottom "  data-tip={user.email}>
+            <div className="flex tooltip tooltip-bottom z-[10]"  data-tip={user.email}>
               <div
                 tabIndex={0}
                 role="button"
