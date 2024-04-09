@@ -16,7 +16,18 @@ const AuthProvider = ({ children }) => {
   // create user
   const createUserWithEmail = (email, password) => {
     setLoading(true);
+    if (password.length < 6) {
+      return alert("Password choto")
+    }
+    if (!/^(?=.*[a-z])[A-Za-z\d][a-z][A-Za-z\d]*$/.test(password)) {
+      return alert("ekta choto hater okkhor daw")
+    }
+    if (!/^(?=.*[A-Z])[A-Za-z\d]*[A-Z][A-Za-z\d]*$/.test(password)) {
+      return alert("BORO HATER okkhor daw")
+    }
+    alert("account khula hoye geche brooo")
     return createUserWithEmailAndPassword(auth, email, password);
+    
   };
 
   const [loading, setLoading] = useState(true);
