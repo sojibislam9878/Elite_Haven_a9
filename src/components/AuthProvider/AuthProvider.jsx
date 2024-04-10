@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../../firebase/FirebaseConfig";
@@ -19,17 +20,30 @@ const AuthProvider = ({ children }) => {
     if (password.length < 6) {
       return alert("Password choto")
     }
-    if (!/^(?=.*[a-z])[A-Za-z\d][a-z][A-Za-z\d]*$/.test(password)) {
+    if (!/^(?=.*[a-z]).*$/.test(password)) {
       return alert("ekta choto hater okkhor daw")
     }
-    if (!/^(?=.*[A-Z])[A-Za-z\d]*[A-Z][A-Za-z\d]*$/.test(password)) {
+    if (!/^(?=.*[A-Z]).*$/.test(password)) {
       return alert("BORO HATER okkhor daw")
     }
     alert("account khula hoye geche brooo")
     return createUserWithEmailAndPassword(auth, email, password);
     
   };
-
+// update user 
+   const updateUser=(name, photo)=>{
+    updateProfile(auth.currentUser, {
+      displayName:name, photoURL: photo
+    })
+    // .then(() => {
+      // Profile updated!
+      // ...
+    // }).catch((error) => {
+      // An error occurred
+      // ...
+    // });
+   }
+// loading
   const [loading, setLoading] = useState(true);
   //   user
   const [user, setUser] = useState(null);
@@ -63,11 +77,12 @@ const AuthProvider = ({ children }) => {
   const githubProvider = new GithubAuthProvider();
 
   const googleSignUP = () => {
-    signInWithPopup(auth, googleProvider);
+    signInWithPopup(auth, googleProvider)
   };
   const githubSignUP = () => {
     signInWithPopup(auth, githubProvider);
   };
+  
   // values
   const values = {
     createUserWithEmail,
@@ -77,6 +92,7 @@ const AuthProvider = ({ children }) => {
     loading,
     googleSignUP,
     githubSignUP,
+    updateUser,
   };
   return (
     <div>

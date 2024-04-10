@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
         },
         {
             path:"/updateProfile",
-            element:<UpdateProfile></UpdateProfile>
+            element:<PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
         },
         {
             path:"/:id",

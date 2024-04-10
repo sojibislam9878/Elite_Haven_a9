@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 const Login = () => {
   const location = useLocation();
-  console.log(location);
   const navigate = useNavigate();
   const {
     register,
@@ -79,11 +78,17 @@ const Login = () => {
         <div className="divider">OR</div>
         {/* social login */}
         <div className="flex justify-center flex-wrap gap-x-8 gap-y-3 mt-8 mb-16">
-          <button onClick={googleSignUP} className="btn flex items-center">
+          <button
+            onClick={googleSignUP}
+            className="btn flex items-center"
+          >
             <img className="w-12 " src="google.png" alt="" />
             <p>Sign Up With Google</p>
           </button>
-          <button onClick={githubSignUP} className="btn flex justify-between items-center">
+          <button
+            onClick={githubSignUP}
+            className="btn flex justify-between items-center"
+          >
             <img className="w-7" src="github.png" alt="" />
             <p>Sign Up With Github</p>
           </button>

@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex  items-center gap-2">
-            <div className="flex tooltip tooltip-bottom z-[10]"  data-tip={user.email || "Unknown"}>
+            <div className="flex tooltip tooltip-bottom z-[10]"  data-tip={user.displayName || "Unknown"}>
               <div
                 tabIndex={0}
                 role="button"
@@ -66,7 +66,7 @@ const Navbar = () => {
                 <div className="w-20 rounded-full">
                   <img
                     alt="profile picture"
-                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                    src={user.photoURL || "https://i.ibb.co/4SrK9pD/profile.jpg"}
                   />
                 </div>
               </div>

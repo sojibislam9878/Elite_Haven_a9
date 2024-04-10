@@ -1,8 +1,14 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 const Registion = () => {
+  const { user } = useAuth();
+  console.log(user);
+  // navigate
+  const navigate = useNavigate();
+  const location = useLocation();
+  const form = location?.state || "/";
   const {
     register,
     handleSubmit,
@@ -13,13 +19,16 @@ const Registion = () => {
   const handleHide = () => {
     setIsHide(!isHide);
   };
-  const {createUserWithEmail}=useAuth()
+  const { createUserWithEmail, updateUser } = useAuth();
 
+  // create profile and update user
   const onSubmit = (data) => {
-    createUserWithEmail(data.email, data.password)
-    .then(res=>{
-      console.log(res.user);
-    })
+    const { email, password, name, photo } = data;
+    createUserWithEmail(email, password).then(() => {
+      updateUser(name, photo);
+      navigate(form);
+      location.reload()
+    });
   };
   return (
     <div className="flex justify-center mt-10">
@@ -27,20 +36,25 @@ const Registion = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <h1 className="text-4xl font-bold mt-12">Register New Account.</h1>
           <p className="font-medium mt-6 opacity-70">
-            Let get you all set up so you can verify your personal account and begin settion up your profile
+            Let get you all set up so you can verify your personal account and
+            begin settion up your profile
           </p>
           <input
             placeholder="Enter Your Full Name"
             {...register("name", { required: true })}
             className="w-full border-b-2 py-4  outline-none mt-10"
           />
-          {errors.name && <span className="text-red-600">Enter Your Full Name</span>}
+          {errors.name && (
+            <span className="text-red-600">Enter Your Full Name</span>
+          )}
           <input
             placeholder="Enter Your Photo URL"
             {...register("photo", { required: true })}
             className="w-full border-b-2 py-4  outline-none mt-6"
           />
-          {errors.photo && <span className="text-red-600">Give Your Photo URL</span>}
+          {errors.photo && (
+            <span className="text-red-600">Give Your Photo URL</span>
+          )}
           <input
             placeholder="Enter Your Email"
             {...register("email", { required: true })}
@@ -78,7 +92,9 @@ const Registion = () => {
         </form>
         <p className="text-center mt-6 mb-28 font-medium opacity-80 text-lg">
           <span className="opacity-80">Already have an account?</span>{" "}
-          <Link to="/login"><span className="text-blue-500 font-bold">Login</span></Link>
+          <Link to="/login">
+            <span className="text-blue-500 font-bold">Login</span>
+          </Link>
         </p>
       </div>
     </div>
