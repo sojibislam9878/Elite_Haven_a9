@@ -7,8 +7,8 @@ const Registion = () => {
   console.log(user);
   // navigate
   const navigate = useNavigate();
-  const location = useLocation();
-  const form = location?.state || "/";
+  const Locations = useLocation();
+  const form = Locations?.state || "/";
   const {
     register,
     handleSubmit,
@@ -27,7 +27,7 @@ const Registion = () => {
     createUserWithEmail(email, password).then(() => {
       updateUser(name, photo);
       navigate(form);
-      location.reload()
+      Locations.reload()
     });
   };
   return (

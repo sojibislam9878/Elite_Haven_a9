@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <Swiper
-        modules={[Navigation, Pagination, A11y, Autoplay]}
+        modules={[Navigation, Pagination, A11y, Autoplay ]}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
@@ -36,10 +36,10 @@ const Home = () => {
             }}
           >
             <div className="container mx-auto p-4 text-white text-center">
-              <h3 className="lg:text-4xl text-2xl pt-80">
+              <h3 className="lg:text-4xl text-xl lg:pt-80 pt-8">
                 WANA FIND YOUR DREAM HOME !
               </h3>
-              <h1 className="lg:text-4xl text-2xl font-bold mt-7">
+              <h1 className="lg:text-4xl text-xl font-bold lg:mt-7 ">
                 WANA FIND YOUR DREAM HOME ! DOM-INNO ALWAYS WITH YOU
               </h1>
               <p className="font-medium mt-12 leading-8">

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 const Login = () => {
-  const location = useLocation();
+  const Locations = useLocation();
   const navigate = useNavigate();
   const {
     register,
@@ -14,7 +14,7 @@ const Login = () => {
   const onSubmit = (data) => {
     login(data.email, data.password).then((res) => {
       console.log(res);
-      navigate(location?.state ? location.state : "/");
+      navigate(Locations?.state ? Locations.state : "/");
     });
   };
 

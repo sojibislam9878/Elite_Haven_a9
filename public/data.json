@@ -7,7 +7,7 @@
       "price": "$5,500,000",
       "status": "Sale",
       "area": "8000 sqft",
-      "location": "Los Angeles, California",
+      "Locations": "Los Angeles, California",
       "image_url": "https://i.ibb.co/CBS5hxQ/1.jpg",
       "facilities": ["Spa", "Home theater", "Gym"]
     },
@@ -19,7 +19,7 @@
       "price": "$3,200,000",
       "status": "Sale",
       "area": "4000 sqft",
-      "location": "New York City, New York",
+      "Locations": "New York City, New York",
       "image_url": "https://i.ibb.co/4gsPGRc/2.jpg",
       "facilities": ["Private elevator", "Rooftop terrace","Fitness center"]
     },
@@ -31,7 +31,7 @@
       "price": "$7,800,000",
       "status": "Sale",
       "area": "10000 sqft",
-      "location": "Miami Beach, Florida",
+      "Locations": "Miami Beach, Florida",
       "image_url": "https://i.ibb.co/PhBq0gw/3.jpg",
       "facilities": ["Private beach access", "Poolside cabanas", "Outdoor kitchen"]
     },
@@ -43,7 +43,7 @@
       "price": "$12,500,000",
       "status": "Rent",
       "area": "15000 sqft",
-      "location": "Bel Air, California",
+      "Locations": "Bel Air, California",
       "image_url": "https://i.ibb.co/DRKxjrh/4.jpg",
       "facilities": ["Tennis court", "Library", "Guest house"]
     },
@@ -55,7 +55,7 @@
       "price": "$6,900,000",
       "status": "Sale",
       "area": "6000 sqft",
-      "location": "Aspen, Colorado",
+      "Locations": "Aspen, Colorado",
       "image_url": "https://i.ibb.co/0JZtC3z/5.jpg",
       "facilities": ["Outdoor hot tub", "Stone fireplace","Wine cellar"]
     },
@@ -67,7 +67,7 @@
       "price": "$9,750,000",
       "status": "Rent",
       "area": "7000 sqft",
-      "location": "Dubai, UAE",
+      "Locations": "Dubai, UAE",
       "image_url": "https://i.ibb.co/S6Rz7LM/6.jpg",
       "facilities": ["Private helipad", "Sky garden", "Infinity pool"]
     },
@@ -79,7 +79,7 @@
       "price": "$4,300,000",
       "status": "Sale",
       "area": "5500 sqft",
-      "location": "Lake Tahoe, Nevada",
+      "Locations": "Lake Tahoe, Nevada",
       "image_url": "https://i.ibb.co/Lvv6nhD/7.jpg",
       "facilities": ["Boat dock", "Home theater", "Gym"]
     },
@@ -91,7 +91,7 @@
       "price": "$15,000,000",
       "status": "Sale",
       "area": "18000 sqft",
-      "location": "Charleston, South Carolina",
+      "Locations": "Charleston, South Carolina",
       "image_url": "https://i.ibb.co/V3gtGmG/8.jpg",
       "facilities": ["Formal gardens", "Ballroom", "Library"]
     },
@@ -103,7 +103,7 @@
       "price": "$3,900,000",
       "status": "Rent",
       "area": "4500 sqft",
-      "location": "Whistler, Canada",
+      "Locations": "Whistler, Canada",
       "image_url": "https://i.ibb.co/ZSng25P/9.jpg",
       "facilities": ["Home theater", "Ski storage", "Gourmet kitchen"]
     }

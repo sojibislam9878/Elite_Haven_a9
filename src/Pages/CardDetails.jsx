@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetchData from "../Hooks/useFetchData";
 import { useEffect, useState } from "react";
+import { addBookMark } from "../utils/addBookMark";
 const CardDetails = () => {
   const { data } = useFetchData();
   const { id } = useParams();
@@ -19,7 +20,7 @@ const CardDetails = () => {
     area,
     status,
     facilities,
-    location
+    Locations
   } = singleCard || {};
   const [one, two, three] = facilities || [];
   return (
@@ -51,7 +52,7 @@ const CardDetails = () => {
         <p className="text-xl font-medium opacity-80 mt-4">{description}</p>
         <div>
           <h6 className="border-y-2 text-xl font-medium opacity-80 py-4 mt-6 flex items-center gap-4"><span className="material-symbols-outlined">location_on</span>
-            {location}
+            {Locations}
           </h6>
         </div>
         <div className="mt-6 flex  gap-20">
@@ -71,7 +72,9 @@ const CardDetails = () => {
           </div>
         </div>
         <div className="mt-6">
-          <button className="btn bg-blue-500 text-white w-1/2 text-xl">
+          <button 
+          onClick={()=>{addBookMark(singleCard)}}
+          className="btn bg-blue-500 text-white w-1/2 text-xl">
             Add to BookMark
           </button>
         </div>

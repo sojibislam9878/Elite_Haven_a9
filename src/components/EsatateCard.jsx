@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const EsatateCard = ({ card }) => {
-  const { id, estate_title, image_url, price, status, location } = card;
+  const { id, estate_title, image_url, price, status, Locations } = card;
   return (
     <Link to={`/${id}`}>
       <div className="card card-compact bg-base-100 shadow-xl h-full">
@@ -14,7 +14,7 @@ const EsatateCard = ({ card }) => {
         </figure>
         <div className="card-body">
           <h2 className="text-4xl font-bold mt-4">{estate_title}</h2>
-          <p className="text-lg font-medium opacity-70">{location}</p>
+          <p className="text-lg font-medium opacity-70">{Locations}</p>
           <p className="text-lg font-medium opacity-70">Status: <span className={`badge ${status==="Rent"?"badge-primary":"badge-secondary"}`}>{status}</span></p>
           <p className="text-lg opacity-70 font-medium">Price: {price}</p>
           <div className="">
