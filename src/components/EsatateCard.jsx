@@ -18,7 +18,7 @@ const EsatateCard = ({ card }) => {
           <p className="text-lg font-medium opacity-70">Status: <span className={`badge ${status==="Rent"?"badge-primary":"badge-secondary"}`}>{status}</span></p>
           <p className="text-lg opacity-70 font-medium">Price: {price}</p>
           <div className="">
-            <button className="btn bg-blue-500 text-white hover:bg-blue-700 mt-6">View Details</button>
+            <button className="btn bg-blue-500 text-white hover:bg-blue-700 mt-6">View Property</button>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const BookMarkCard = ({items}) => {
     console.log(items);
     const {id,estate_title , image_url , Locations, status, price}=items
@@ -25,7 +26,9 @@ const BookMarkCard = ({items}) => {
           <p className="text-lg font-medium opacity-70">Status: <span className={`badge ${status==="Rent"?"badge-primary":"badge-secondary"}`}>{status}</span></p>
           <p className="text-lg opacity-70 font-medium">Price: {price}</p>
           <div className=" flex flex-wrap gap-9">
-            <button className="btn bg-blue-500 text-white hover:bg-blue-700 mt-6">View Details</button>
+            <Link to={`/${id}`}>
+            <button className="btn bg-blue-500 text-white hover:bg-blue-700 mt-6">View Property</button>
+            </Link>
             <button
             onClick={removeBookMark}
              className="btn bg-red-700 text-white hover:bg-red-800 mt-6">Remove from Book Mark</button>

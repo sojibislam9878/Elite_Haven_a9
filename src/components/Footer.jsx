@@ -1,3 +1,7 @@
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 const Footer = () => {
     return (
         <div className="bg-gray-200 md:mt-36 mt-12">
@@ -26,10 +30,15 @@ const Footer = () => {
             </div>
             <div className=" md:flex justify-between text-center mt-12 pb-6">
                 <div><p>©2024 Elite Haven  all right reserved.</p></div>
-                <div>social icons</div>
+                <div className="flex gap-3 lg:gap-6">
+                    <div className="lg:text-3xl text-xl hover:cursor-pointer"><FaFacebook /></div>
+                    <div className="lg:text-3xl text-xl hover:cursor-pointer"><FaTwitter /></div>
+                    <div className="lg:text-3xl text-xl hover:cursor-pointer"><FaInstagram /></div>
+                    <div className="lg:text-3xl text-xl hover:cursor-pointer"><FaGithub /></div>
+                </div>
             </div>
         </div>
-        </div>
+        </div> 
     );
 };
 

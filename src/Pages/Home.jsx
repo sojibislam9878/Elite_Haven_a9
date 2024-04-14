@@ -14,9 +14,9 @@ const Home = () => {
   return (
     <div>
       <Swiper
-        modules={[Navigation, Pagination, A11y, Autoplay ]}
+        modules={[Navigation, Pagination, A11y ,Autoplay]}
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -36,13 +36,13 @@ const Home = () => {
             }}
           >
             <div className="container mx-auto p-4 text-white text-center">
-              <h3 className="lg:text-4xl text-xl lg:pt-80 pt-8">
+              <h3 className="lg:text-4xl text-2xl lg:pt-80 pt-20">
                 WANA FIND YOUR DREAM HOME !
               </h3>
-              <h1 className="lg:text-4xl text-xl font-bold lg:mt-7 ">
+              <h1 className="lg:text-4xl text-2xl font-bold lg:mt-7 mt-4">
                 WANA FIND YOUR DREAM HOME ! DOM-INNO ALWAYS WITH YOU
               </h1>
-              <p className="font-medium mt-12 leading-8">
+              <p className="font-medium text-lg lg:mt-12 mt-6 lg:leading-8">
                 Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor
                 sit amet contetur adipiscing elit, sed do eiusmod tempor
                 incididunt Lorem ipsum dolor sit amet consectetur adipisicing
@@ -50,7 +50,7 @@ const Home = () => {
                 adipisicing elit. Eius nihil at saepe eaque mollitia
                 exercitationem!
               </p>
-              <button className="btn mt-14 mb-80">Read More</button>
+              <button className="btn mt-14 lg:mb-80 mb-10">Read More</button>
             </div>
           </div>
         </SwiperSlide>
@@ -65,13 +65,13 @@ const Home = () => {
             }}
           >
             <div className="container mx-auto p-4 text-white text-center">
-              <h3 className="lg:text-4xl text-2xl pt-80">
+              <h3 className="lg:text-4xl text-2xl lg:pt-80 pt-20">
                 WANA FIND YOUR DREAM HOME !
               </h3>
-              <h1 className="lg:text-4xl text-2xl font-bold mt-7">
+              <h1 className="lg:text-4xl text-2xl font-bold lg:mt-7 mt-4">
                 WANA FIND YOUR DREAM HOME ! DOM-INNO ALWAYS WITH YOU
               </h1>
-              <p className="font-medium mt-12 leading-8">
+              <p className="font-medium text-lg lg:mt-12 mt-6 lg:leading-8">
                 Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor
                 sit amet contetur adipiscing elit, sed do eiusmod tempor
                 incididunt Lorem ipsum dolor sit amet consectetur adipisicing
@@ -79,7 +79,7 @@ const Home = () => {
                 adipisicing elit. Eius nihil at saepe eaque mollitia
                 exercitationem!
               </p>
-              <button className="btn mt-14 mb-80">Read More</button>
+              <button className="btn mt-14 lg:mb-80 mb-10">Read More</button>
             </div>
           </div>
         </SwiperSlide>
@@ -93,14 +93,14 @@ const Home = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="container mx-auto p-4 text-white text-center">
-              <h3 className="lg:text-4xl text-2xl pt-80">
+           <div className="container mx-auto p-4 text-white text-center">
+              <h3 className="lg:text-4xl text-2xl lg:pt-80 pt-20">
                 WANA FIND YOUR DREAM HOME !
               </h3>
-              <h1 className="lg:text-4xl text-2xl font-bold mt-7">
+              <h1 className="lg:text-4xl text-2xl font-bold lg:mt-7 mt-4">
                 WANA FIND YOUR DREAM HOME ! DOM-INNO ALWAYS WITH YOU
               </h1>
-              <p className="font-medium mt-12 leading-8">
+              <p className="font-medium text-lg lg:mt-12 mt-6 lg:leading-8">
                 Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor
                 sit amet contetur adipiscing elit, sed do eiusmod tempor
                 incididunt Lorem ipsum dolor sit amet consectetur adipisicing
@@ -108,17 +108,17 @@ const Home = () => {
                 adipisicing elit. Eius nihil at saepe eaque mollitia
                 exercitationem!
               </p>
-              <button className="btn mt-14 mb-80">Read More</button>
+              <button className="btn mt-14 lg:mb-80 mb-10">Read More</button>
             </div>
           </div>
         </SwiperSlide>
       </Swiper>
       {/* luxury estate section */}
-      <div className="mt-12 container mx-auto p-4">
+      <div className="lg:mt-28 mt-12 container mx-auto p-4">
         {/* section header  */}
         <div className="text-center">
           <h1 className="text-3xl font-bold">estate section</h1>
-          <p className="opacity-80">
+          <p className="opacity-80 mt-6 lg:w-2/3 mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Consequatur aliquid ut soluta dolor minus. Corporis magni unde vero
             hic autem. Dolores sed itaque accusamus quasi, nemo enim rerum earum
@@ -126,7 +126,7 @@ const Home = () => {
           </p>
         </div>
         {/* section body  */}
-        <div className="grid lg:grid-cols-3 gap-6 mt-6">
+        <div className="grid lg:grid-cols-3 gap-6 mt-16">
           
          {
           data.map(card=><EsatateCard card={card}  key={card.id}></EsatateCard>)
