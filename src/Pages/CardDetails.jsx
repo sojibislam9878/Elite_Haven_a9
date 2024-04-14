@@ -32,10 +32,15 @@ const CardDetails = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className=" w-full h-[40rem] lg:h-[43.75rem] mx-auto rounded-xl object-cente"
+        className=" w-full h-[40rem] lg:h-[43.75rem] mx-auto rounded-xl object-cente relative"
       >
         <div className="flex justify-center items-center h-full">
           <h1 className="text-white text-4xl font-bold">{segment_name}</h1>
+        </div>
+        <div 
+        onClick={()=>{addBookMark(singleCard)}}
+        className="absolute right-10 top-10 bg-white p-3 bg-opacity-40 rounded-xl text-pink-600 hover:cursor-pointer">
+        <span className="material-symbols-outlined">bookmark_add</span>
         </div>
       </div>
       <div className=" mt-6">
@@ -74,7 +79,7 @@ const CardDetails = () => {
         <div className="mt-6">
           <button 
           onClick={()=>{addBookMark(singleCard)}}
-          className="btn bg-blue-500 text-white w-1/2 text-xl">
+          className="btn bg-gradient-to-r from-[#4facfe] to-blue-500 text-white text-xl">
             Add to BookMark
           </button>
         </div>

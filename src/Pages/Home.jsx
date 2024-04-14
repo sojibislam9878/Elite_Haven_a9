@@ -8,13 +8,14 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import EsatateCard from "../components/EsatateCard";
 import useFetchData from "../Hooks/useFetchData";
+import Reviews from "../components/Reviews";
 const Home = () => {
-  const {data}= useFetchData()
+  const { data } = useFetchData();
   console.log(data);
   return (
     <div>
       <Swiper
-        modules={[Navigation, Pagination, A11y ,Autoplay]}
+        modules={[Navigation, Pagination, A11y, Autoplay]}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -93,7 +94,7 @@ const Home = () => {
               backgroundPosition: "center",
             }}
           >
-           <div className="container mx-auto p-4 text-white text-center">
+            <div className="container mx-auto p-4 text-white text-center">
               <h3 className="lg:text-4xl text-2xl lg:pt-80 pt-20">
                 WANA FIND YOUR DREAM HOME !
               </h3>
@@ -127,12 +128,12 @@ const Home = () => {
         </div>
         {/* section body  */}
         <div className="grid lg:grid-cols-3 gap-6 mt-16">
-          
-         {
-          data.map(card=><EsatateCard card={card}  key={card.id}></EsatateCard>)
-         }
-         
+          {data.map((card) => (
+            <EsatateCard card={card} key={card.id}></EsatateCard>
+          ))}
         </div>
+        {/* review  */}
+        <Reviews></Reviews>
       </div>
     </div>
   );
