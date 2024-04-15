@@ -6,7 +6,7 @@ const FAQSection = () => {
         <div className="text-center pb-6 border-b-2 border-dashed">
           <h3 className="text-4xl font-extrabold font-garamond">FAQ</h3>
           <p className="opacity-80 leading-7 mt-6">
-            check out other people experiences with our service
+          Find quick answers to common questions about Luxury Estates services and properties.
           </p>
         </div>
         {/* main  */}

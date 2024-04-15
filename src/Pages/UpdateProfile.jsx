@@ -70,7 +70,7 @@ const UpdateProfile = () => {
 
             <input
               type="submit"
-              value="Update Youn Information"
+              value="Update Your Information"
               className="btn w-full bg-blue-500 text-white text-lg mt-10"
             />
           </form>
