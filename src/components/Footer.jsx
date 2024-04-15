@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto p-4 ">
         <div className="md:flex justify-between flex-wrap gap-5 pb-16 border-b-2 border-gray-400 border-opacity-70">
           <div className="mt-8 ">
-            <h1 className="text-4xl font-bold">Elite Haven</h1>
+            <h1 className="text-4xl font-bold font-garamond">Elite Haven</h1>
           </div>
           <div className="mt-8">
             <h1 className="text-2xl font-semibold">Address</h1>

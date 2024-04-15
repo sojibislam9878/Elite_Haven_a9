@@ -44,7 +44,7 @@ const CardDetails = () => {
         </div>
       </div>
       <div className=" mt-6">
-        <h1 className="text-4xl font-bold playfair flex items-center gap-4">
+        <h1 className="text-4xl font-extrabold flex items-center gap-4 font-garamond">
           {estate_title}{" "}
           <sup
             className={`badge ${

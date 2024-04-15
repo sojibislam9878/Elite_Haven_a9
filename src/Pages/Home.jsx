@@ -9,6 +9,7 @@ import "swiper/css/scrollbar";
 import EsatateCard from "../components/EsatateCard";
 import useFetchData from "../Hooks/useFetchData";
 import Reviews from "../components/Reviews";
+import FAQSection from "../components/FAQSection";
 const Home = () => {
   const { data } = useFetchData();
   console.log(data);
@@ -37,13 +38,10 @@ const Home = () => {
             }}
           >
             <div className="container mx-auto p-4 text-white text-center">
-              <h3 className="lg:text-4xl text-2xl lg:pt-80 pt-20">
-                WANA FIND YOUR DREAM HOME !
-              </h3>
-              <h1 className="lg:text-4xl text-2xl font-bold lg:mt-7 mt-4">
+              <h1 className="lg:text-4xl text-2xl font-extrabold lg:mt-7 mt-4 pt-12 font-garamond lg:pt-40">
                 WANA FIND YOUR DREAM HOME ! DOM-INNO ALWAYS WITH YOU
               </h1>
-              <p className="font-medium text-lg lg:mt-12 mt-6 lg:leading-8">
+              <p className="opacity-80 leading-7 lg:mt-12 mt-6 lg:leading-8">
                 Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor
                 sit amet contetur adipiscing elit, sed do eiusmod tempor
                 incididunt Lorem ipsum dolor sit amet consectetur adipisicing
@@ -65,14 +63,11 @@ const Home = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="container mx-auto p-4 text-white text-center">
-              <h3 className="lg:text-4xl text-2xl lg:pt-80 pt-20">
-                WANA FIND YOUR DREAM HOME !
-              </h3>
-              <h1 className="lg:text-4xl text-2xl font-bold lg:mt-7 mt-4">
+            <div className="container mx-auto p-4 text-white text-center ">
+              <h1 className="lg:text-4xl text-2xl font-extrabold font-garamond lg:mt-7 mt-4 pt-12 lg:pt-40">
                 WANA FIND YOUR DREAM HOME ! DOM-INNO ALWAYS WITH YOU
               </h1>
-              <p className="font-medium text-lg lg:mt-12 mt-6 lg:leading-8">
+              <p className="opacity-80 leading-7 lg:mt-12 mt-6 lg:leading-8">
                 Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor
                 sit amet contetur adipiscing elit, sed do eiusmod tempor
                 incididunt Lorem ipsum dolor sit amet consectetur adipisicing
@@ -95,13 +90,10 @@ const Home = () => {
             }}
           >
             <div className="container mx-auto p-4 text-white text-center">
-              <h3 className="lg:text-4xl text-2xl lg:pt-80 pt-20">
-                WANA FIND YOUR DREAM HOME !
-              </h3>
-              <h1 className="lg:text-4xl text-2xl font-bold lg:mt-7 mt-4">
+              <h1 className="lg:text-4xl text-2xl font-extrabold font-garamond lg:mt-7 mt-4 pt-12 lg:pt-40">
                 WANA FIND YOUR DREAM HOME ! DOM-INNO ALWAYS WITH YOU
               </h1>
-              <p className="font-medium text-lg lg:mt-12 mt-6 lg:leading-8">
+              <p className="opacity-80 leading-7 lg:mt-12 mt-6 lg:leading-8">
                 Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor
                 sit amet contetur adipiscing elit, sed do eiusmod tempor
                 incididunt Lorem ipsum dolor sit amet consectetur adipisicing
@@ -115,11 +107,11 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
       {/* luxury estate section */}
-      <div className="lg:mt-28 mt-12 container mx-auto p-4">
+      <div className="container mx-auto p-4">
         {/* section header  */}
-        <div className="text-center">
-          <h1 className="text-3xl font-bold">estate section</h1>
-          <p className="opacity-80 mt-6 lg:w-2/3 mx-auto">
+        <div className="text-center mt-32 border-b-2 border-dashed pb-6">
+          <h1 className="text-4xl font-extrabold font-garamond">Luxury Estates</h1>
+          <p className="opacity-80 leading-7 mt-6 lg:w-2/3 mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Consequatur aliquid ut soluta dolor minus. Corporis magni unde vero
             hic autem. Dolores sed itaque accusamus quasi, nemo enim rerum earum
@@ -127,13 +119,14 @@ const Home = () => {
           </p>
         </div>
         {/* section body  */}
-        <div className="grid lg:grid-cols-3 gap-6 mt-16">
+        <div className="grid lg:grid-cols-3 gap-6 mt-14">
           {data.map((card) => (
             <EsatateCard card={card} key={card.id}></EsatateCard>
           ))}
         </div>
         {/* review  */}
         <Reviews></Reviews>
+        <FAQSection></FAQSection>
       </div>
     </div>
   );
