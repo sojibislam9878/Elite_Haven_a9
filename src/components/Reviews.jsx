@@ -6,17 +6,18 @@ import Marquee from "react-fast-marquee";
 import { FaStarHalfAlt } from "react-icons/fa";
 
 
+
 const Reviews = () => {
     return (
         <div className="">
             {/* review */}
-          <div className="mt-32">
-            <div className="text-center pb-6 border-b-2 border-dashed">
+          <div className="md:mt-32 mt-10">
+            <div data-aos-anchor-placement="top-center" className="text-center pb-6 border-b-2 border-dashed">
               <h3 className="text-4xl font-extrabold font-garamond">Latest Reviews</h3>
               <p className="opacity-80 leading-7 mt-6">check out other people experiences with our service</p>
             </div>
             {/* card cantainer */}
-            <div className=" mt-14">
+            <div className=" md:mt-14 mt-4">
               {/* cards */}
               <Marquee pauseOnHover={true} speed={70} className="p-8">
               <div className="flex gap-8">

@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="bg-gray-200 md:mt-36 pt-12">
+    <div className="bg-gray-200 md:mt-36 md:pt-12">
       <div className="container mx-auto p-4 ">
         <div className="md:flex justify-between flex-wrap gap-5 pb-16 border-b-2 border-gray-400 border-opacity-70">
           <div className="mt-8 ">
@@ -41,7 +41,7 @@ const Footer = () => {
           <div>
             <p>©2024 Elite Haven all right reserved.</p>
           </div>
-          <div className="flex gap-3 lg:gap-6">
+          <div className="flex gap-3 lg:gap-6 text-center justify-center mt-3 md:mt-0">
             <div className="lg:text-3xl text-xl hover:cursor-pointer">
               <FaFacebook />
             </div>

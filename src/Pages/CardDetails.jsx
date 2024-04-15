@@ -36,14 +36,14 @@ const CardDetails = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className=" w-full h-[40rem] lg:h-[43.75rem] mx-auto rounded-xl object-cente relative"
+        className=" w-full md:h-[40rem] h-[25rem] lg:h-[43.75rem] mx-auto rounded-xl object-cente relative"
       >
         <div className="flex justify-center items-center h-full">
           <h1 className="text-white text-4xl font-bold">{segment_name}</h1>
         </div>
         <div 
         onClick={()=>{addBookMark(singleCard)}}
-        className="absolute right-10 top-10 bg-white p-3 bg-opacity-40 rounded-xl text-pink-600 hover:cursor-pointer">
+        className="absolute md:right-10 md:top-10 right-4 top-4 bg-white md:p-3 p-2 bg-opacity-40 rounded-xl text-pink-600 hover:cursor-pointer">
         <span className="material-symbols-outlined">bookmark_add</span>
         </div>
       </div>
@@ -74,7 +74,7 @@ const CardDetails = () => {
         </div>
         <div className="border-b-2 pb-5 gap-8 items-center mt-7 border p-4 bg-blue-400 bg-opacity-30 rounded-xl">
           <h1 className="text-3xl font-medium">Facilities :</h1>
-          <div className="flex gap-8 mt-5">
+          <div className="flex flex-wrap gap-8 mt-5">
             <button className="font-bold flex gap-7 btn">{one}</button>
             <button className="font-bold flex gap-7 btn">{two}</button>
             <button className="font-bold flex gap-7 btn">{three}</button>

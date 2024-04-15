@@ -26,7 +26,7 @@ const BookMarkCard = ({items}) => {
           <p className="text-lg font-medium opacity-70 flex items-center gap-2"><FaLocationDot />{Locations}</p>
           <p className="text-lg font-medium opacity-70">Status: <span className={`badge ${status==="Rent"?"badge-primary":"badge-secondary"}`}>{status}</span></p>
           <p className="text-lg opacity-70 font-medium">Price: {price}</p>
-          <div className=" flex flex-wrap gap-9">
+          <div className=" flex flex-wrap md:gap-9 gap-2">
             <Link to={`/${id}`}>
             <button className="btn bg-blue-500 text-white hover:bg-blue-700 mt-6">View Property</button>
             </Link>

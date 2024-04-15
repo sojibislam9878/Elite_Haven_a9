@@ -15,14 +15,15 @@ const UpdateProfile = () => {
     updateUser(updateName, updatePhoto);
     location.reload();
   };
+  const {logout}=useAuth()
 
   return (
-    <div className="bg-slate-50 mt-12">
+    <div className="bg-slate-50 lg:mt-12">
       <Helmet>
         <title>Elite Haven || Update Profile</title>
       </Helmet>
-      <div className="container mx-auto p-">
-      <div className="lg:flex justify-center gap-16 py-20">
+      <div className="container mx-auto p-4">
+      <div className="lg:flex justify-center gap-16 lg:py-20 py-4">
       <div className=" bg-blue-50 rounded-b-none lg:rounded-b-xl rounded-xl overflow-hidden shadow-xl lg:w-1/2">
         <div className="">
           <div className="flex justify-center items-center bg-blue-600">
@@ -47,6 +48,10 @@ const UpdateProfile = () => {
             <h3 className="text-xl font-bold opacity-80 mt-1">
               {user?.photoURL || "Not Found"}
             </h3>
+            <div className="mt-4 md:hidden">
+              <button onClick={logout} className="btn bg-gradient-to-r from-[#4facfe] to-blue-500 text-white">Log Out</button>
+            </div>
+
           </div>
         </div>
       </div>

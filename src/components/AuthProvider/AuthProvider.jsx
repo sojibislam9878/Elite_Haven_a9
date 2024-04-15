@@ -79,6 +79,7 @@ const AuthProvider = ({ children }) => {
       // ...
     // });
    }
+  //  reload 
 // loading
   const [loading, setLoading] = useState(true);
   //   user
@@ -113,10 +114,12 @@ const AuthProvider = ({ children }) => {
   const githubProvider = new GithubAuthProvider();
 
   const googleSignUP = () => {
-    signInWithPopup(auth, googleProvider)
+    signInWithPopup(auth, googleProvider).then(()=>{
+    })
   };
   const githubSignUP = () => {
-    signInWithPopup(auth, githubProvider);
+    signInWithPopup(auth, githubProvider).then(()=>{
+    })
   };
   
   // values

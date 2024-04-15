@@ -40,11 +40,11 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center p-4 mt-10">
         <Helmet>
           <title>Elite Haven || LogIn</title>
         </Helmet>
-        <div className=" rounded-xl p-6 w-2/3 xl:w-1/3 mx-auto shadow-xl border-t">
+        <div className=" rounded-xl p-6  md:w-2/3 xl:w-1/3 mx-auto shadow-xl border-t">
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1 className="text-4xl font-bold mt-12">Login Your Account.</h1>
             <p className="font-medium mt-6 opacity-70">

@@ -126,13 +126,13 @@ const Navbar = () => {
             </div>
             <button
               onClick={logout}
-              className="btn bg-blue-500 text-white font-bold hover:bg-blue-700"
+              className="btn bg-blue-500 text-white font-bold hover:bg-blue-700 hidden md:flex"
             >
               Logout
             </button>
           </div>
         ) : (
-          <Link to="/login">
+          <Link to="/login ">
             <button className="btn bg-blue-500 text-white font-bold hover:bg-blue-700">
               Login
             </button>

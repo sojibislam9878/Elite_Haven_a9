@@ -1,7 +1,7 @@
 const FAQSection = () => {
   return (
     <div className="container mx-auto p-4">
-      <div className="mt-32">
+      <div className="md:mt-32 mt-6">
         {/* title  */}
         <div className="text-center pb-6 border-b-2 border-dashed">
           <h3 className="text-4xl font-extrabold font-garamond">FAQ</h3>
@@ -11,7 +11,7 @@ const FAQSection = () => {
         </div>
         {/* main  */}
         <div>
-        <div className="collapse collapse-plus bg-base-200 mt-16">
+        <div className="collapse collapse-plus bg-base-200 md:mt-16 mt-8">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium">
           How do I schedule a viewing?

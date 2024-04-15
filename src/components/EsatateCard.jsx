@@ -5,7 +5,7 @@ const EsatateCard = ({ card }) => {
   const { id, estate_title, image_url, price, status, Locations } = card;
   return (
     <Link to={`/${id}`}>
-      <div className="card card-compact bg-base-100 shadow-xl h-full">
+      <div data-aos={id % 2 === 0? "fade-right" : "fade-left"} className="card card-compact bg-base-100 shadow-xl h-full">
         <figure>
           <img
             className="transition duration-300 hover:scale-105"
