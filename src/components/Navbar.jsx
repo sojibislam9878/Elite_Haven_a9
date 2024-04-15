@@ -64,7 +64,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-3xl font-garamond">Elite Haven</a>
+        <Link to="/" className="btn btn-ghost text-3xl font-garamond">Elite Haven</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -113,12 +113,14 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <div className="w-20 rounded-full">
+                  <Link to="/updateprofile">
                   <img
                     alt="profile picture"
                     src={
                       user.photoURL || "https://i.ibb.co/4SrK9pD/profile.jpg"
                     }
                   />
+                  </Link>
                 </div>
               </div>
             </div>

@@ -10,11 +10,15 @@ import EsatateCard from "../components/EsatateCard";
 import useFetchData from "../Hooks/useFetchData";
 import Reviews from "../components/Reviews";
 import FAQSection from "../components/FAQSection";
+import { Helmet } from "react-helmet";
 const Home = () => {
   const { data } = useFetchData();
   console.log(data);
   return (
     <div>
+      <Helmet>
+        <title>Elite Haven</title>
+      </Helmet>
       <Swiper
         modules={[Navigation, Pagination, A11y, Autoplay]}
         autoplay={{
@@ -39,10 +43,15 @@ const Home = () => {
           >
             <div className="container mx-auto p-4 text-white text-center">
               <h1 className="lg:text-4xl text-2xl font-extrabold lg:mt-7 mt-4 pt-12 font-garamond lg:pt-40 leading-10 lg:leading-[60px]">
-                WANA FIND YOUR DREAM PROPERTY ? <br /> ELITE HAVEN ALWAYS WITH YOU
+                WANA FIND YOUR DREAM PROPERTY ? <br /> ELITE HAVEN ALWAYS WITH
+                YOU
               </h1>
               <p className="opacity-80 leading-7 lg:mt-12 mt-6 lg:leading-8">
-              Experience unparalleled luxury at Luxury Estates. Explore our exclusive collection of opulent properties, meticulously crafted to exceed your expectations. Your dream home awaits amidst breathtaking landscapes and impeccable service. Welcome to extraordinary living.
+                Experience unparalleled luxury at Luxury Estates. Explore our
+                exclusive collection of opulent properties, meticulously crafted
+                to exceed your expectations. Your dream home awaits amidst
+                breathtaking landscapes and impeccable service. Welcome to
+                extraordinary living.
               </p>
               <button className="btn mt-14 lg:mb-80 mb-10">Read More</button>
             </div>
@@ -60,10 +69,15 @@ const Home = () => {
           >
             <div className="container mx-auto p-4 text-white text-center ">
               <h1 className="lg:text-4xl text-2xl font-extrabold font-garamond lg:mt-7 mt-4 pt-12 lg:pt-40 leading-10 lg:leading-[60px]">
-                WANA FIND YOUR DREAM PROPERTY ? <br /> ELITE HAVEN ALWAYS WITH YOU
+                WANA FIND YOUR DREAM PROPERTY ? <br /> ELITE HAVEN ALWAYS WITH
+                YOU
               </h1>
               <p className="opacity-80 leading-7 lg:mt-12 mt-6 lg:leading-8">
-              Experience unparalleled luxury at Luxury Estates. Explore our exclusive collection of opulent properties, meticulously crafted to exceed your expectations. Your dream home awaits amidst breathtaking landscapes and impeccable service. Welcome to extraordinary living.
+                Experience unparalleled luxury at Luxury Estates. Explore our
+                exclusive collection of opulent properties, meticulously crafted
+                to exceed your expectations. Your dream home awaits amidst
+                breathtaking landscapes and impeccable service. Welcome to
+                extraordinary living.
               </p>
               <button className="btn mt-14 lg:mb-80 mb-10">Read More</button>
             </div>
@@ -81,10 +95,15 @@ const Home = () => {
           >
             <div className="container mx-auto p-4 text-white text-center">
               <h1 className="lg:text-4xl text-2xl font-extrabold font-garamond lg:mt-7 mt-4 pt-12 lg:pt-40 leading-10 lg:leading-[60px]">
-                WANA FIND YOUR DREAM PROPERTY ? <br /> ELITE HAVEN ALWAYS WITH YOU
+                WANA FIND YOUR DREAM PROPERTY ? <br /> ELITE HAVEN ALWAYS WITH
+                YOU
               </h1>
               <p className="opacity-80 leading-7 lg:mt-12 mt-6 lg:leading-8">
-              Experience unparalleled luxury at Luxury Estates. Explore our exclusive collection of opulent properties, meticulously crafted to exceed your expectations. Your dream home awaits amidst breathtaking landscapes and impeccable service. Welcome to extraordinary living.
+                Experience unparalleled luxury at Luxury Estates. Explore our
+                exclusive collection of opulent properties, meticulously crafted
+                to exceed your expectations. Your dream home awaits amidst
+                breathtaking landscapes and impeccable service. Welcome to
+                extraordinary living.
               </p>
               <button className="btn mt-14 lg:mb-80 mb-10">Read More</button>
             </div>
@@ -95,9 +114,14 @@ const Home = () => {
       <div className="container mx-auto p-4">
         {/* section header  */}
         <div className="text-center mt-32 border-b-2 border-dashed pb-6">
-          <h1 className="text-4xl font-extrabold font-garamond ">Luxury Estates</h1>
+          <h1 className="text-4xl font-extrabold font-garamond ">
+            Luxury Estates
+          </h1>
           <p className="opacity-80 leading-7 mt-6 lg:w-2/3 mx-auto">
-          Indulge in luxury living at its finest with our exclusive estates. Impeccable craftsmanship, breathtaking views, and unparalleled amenities await you in each meticulously curated property. Experience the epitome of elegance and comfort.
+            Indulge in luxury living at its finest with our exclusive estates.
+            Impeccable craftsmanship, breathtaking views, and unparalleled
+            amenities await you in each meticulously curated property.
+            Experience the epitome of elegance and comfort.
           </p>
         </div>
         {/* section body  */}

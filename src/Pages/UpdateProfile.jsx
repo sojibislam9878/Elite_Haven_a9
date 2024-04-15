@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 const UpdateProfile = () => {
   const { user } = useAuth();
   const {
@@ -17,6 +18,9 @@ const UpdateProfile = () => {
 
   return (
     <div className="bg-slate-50 mt-12">
+      <Helmet>
+        <title>Elite Haven || Update Profile</title>
+      </Helmet>
       <div className="container mx-auto p-">
       <div className="lg:flex justify-center gap-16 py-20">
       <div className=" bg-blue-50 rounded-b-none lg:rounded-b-xl rounded-xl overflow-hidden shadow-xl lg:w-1/2">

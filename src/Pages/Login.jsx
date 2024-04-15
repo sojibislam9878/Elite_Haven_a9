@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 const Login = () => {
   const Locations = useLocation();
   const navigate = useNavigate();
@@ -24,6 +25,9 @@ const Login = () => {
   };
   return (
     <div className="flex justify-center mt-10">
+      <Helmet>
+        <title>Elite Haven || LogIn</title>
+      </Helmet>
       <div className=" rounded-xl p-6 w-2/3 xl:w-1/3 mx-auto shadow-xl border-t">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h1 className="text-4xl font-bold mt-12">Login Your Account.</h1>

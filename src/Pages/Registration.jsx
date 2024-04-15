@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 const Registion = () => {
   const { user } = useAuth();
   console.log(user);
@@ -32,6 +33,9 @@ const Registion = () => {
   };
   return (
     <div className="flex justify-center mt-10">
+      <Helmet>
+        <title>Elite Haven || Registration</title>
+      </Helmet>
       <div className=" rounded-xl p-6 w-2/3 xl:w-1/3 mx-auto shadow-xl border-t">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h1 className="text-4xl font-bold mt-12">Register New Account.</h1>

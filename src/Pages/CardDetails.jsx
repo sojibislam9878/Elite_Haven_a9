@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetchData from "../Hooks/useFetchData";
 import { useEffect, useState } from "react";
 import { addBookMark } from "../utils/addBookMark";
+import { Helmet } from "react-helmet";
 const CardDetails = () => {
   const { data } = useFetchData();
   const { id } = useParams();
@@ -25,6 +26,9 @@ const CardDetails = () => {
   const [one, two, three] = facilities || [];
   return (
     <div className=" mt-12 container mx-auto p-4">
+      <Helmet>
+      <title>{`Details of ${estate_title}`}</title>
+      </Helmet>
       <div
         style={{
           backgroundImage: `linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${image_url})`,
