@@ -7,18 +7,17 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import CardDetails from "../Pages/CardDetails";
 import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 import BookMark from "../Pages/BookMark";
-// import ErrorPage from "../Pages/ErrorPage";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // errorElement:<ErrorPage></ErrorPage>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("data.json"),
       },
       {
         path: "/login",
@@ -37,18 +36,16 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: "/details/:id",
+        element: <PrivetRoute>
+          <CardDetails></CardDetails>,
+        </PrivetRoute>
+      },
+      {
         path: "/bookmark",
         element: (
           <PrivetRoute>
             <BookMark></BookMark>
-          </PrivetRoute>
-        ),
-      },
-      {
-        path: "/:id",
-        element: (
-          <PrivetRoute>
-            <CardDetails></CardDetails>
           </PrivetRoute>
         ),
       },

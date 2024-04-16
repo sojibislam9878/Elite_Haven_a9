@@ -6,12 +6,13 @@ import { Helmet } from "react-helmet";
 const CardDetails = () => {
   const { data } = useFetchData();
   const { id } = useParams();
-  const [singleCard, setSingleCard] = useState([]);
+  const [singleCard, setSingleCard] = useState();
   useEffect(() => {
     const card = data.find((items) => items.id == id);
     setSingleCard(card);
   }, [data, id]);
   console.log(singleCard);
+  console.log(data);
   const {
     estate_title,
     image_url,
@@ -21,13 +22,13 @@ const CardDetails = () => {
     area,
     status,
     facilities,
-    Locations
+    Locations,
   } = singleCard || {};
   const [one, two, three] = facilities || [];
   return (
     <div className=" mt-12 container mx-auto p-4">
       <Helmet>
-      <title>{`Details of ${estate_title}`}</title>
+        <title>{`Details of ${estate_title}`}</title>
       </Helmet>
       <div
         style={{
@@ -41,10 +42,13 @@ const CardDetails = () => {
         <div className="flex justify-center items-center h-full">
           <h1 className="text-white text-4xl font-bold">{segment_name}</h1>
         </div>
-        <div 
-        onClick={()=>{addBookMark(singleCard)}}
-        className="absolute md:right-10 md:top-10 right-4 top-4 bg-white md:p-3 p-2 bg-opacity-40 rounded-xl text-pink-600 hover:cursor-pointer">
-        <span className="material-symbols-outlined">bookmark_add</span>
+        <div
+          onClick={() => {
+            addBookMark(singleCard);
+          }}
+          className="absolute md:right-10 md:top-10 right-4 top-4 bg-white md:p-3 p-2 bg-opacity-40 rounded-xl text-pink-600 hover:cursor-pointer"
+        >
+          <span className="material-symbols-outlined">bookmark_add</span>
         </div>
       </div>
       <div className=" mt-6">
@@ -60,7 +64,8 @@ const CardDetails = () => {
         </h1>
         <p className="text-xl font-medium opacity-80 mt-4">{description}</p>
         <div>
-          <h6 className="border-y-2 text-xl font-medium opacity-80 py-4 mt-6 flex items-center gap-4"><span className="material-symbols-outlined">location_on</span>
+          <h6 className="border-y-2 text-xl font-medium opacity-80 py-4 mt-6 flex items-center gap-4">
+            <span className="material-symbols-outlined">location_on</span>
             {Locations}
           </h6>
         </div>
@@ -81,9 +86,12 @@ const CardDetails = () => {
           </div>
         </div>
         <div className="mt-6">
-          <button 
-          onClick={()=>{addBookMark(singleCard)}}
-          className="btn bg-gradient-to-r from-[#4facfe] to-blue-500 text-white text-xl">
+          <button
+            onClick={() => {
+              addBookMark(singleCard);
+            }}
+            className="btn bg-gradient-to-r from-[#4facfe] to-blue-500 text-white text-xl"
+          >
             Add to BookMark
           </button>
         </div>
