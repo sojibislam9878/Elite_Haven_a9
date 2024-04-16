@@ -3,6 +3,8 @@ import useFetchData from "../Hooks/useFetchData";
 import { useEffect, useState } from "react";
 import { addBookMark } from "../utils/addBookMark";
 import { Helmet } from "react-helmet";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const CardDetails = () => {
   const { data } = useFetchData();
   const { id } = useParams();
@@ -11,8 +13,6 @@ const CardDetails = () => {
     const card = data.find((items) => items.id == id);
     setSingleCard(card);
   }, [data, id]);
-  console.log(singleCard);
-  console.log(data);
   const {
     estate_title,
     image_url,
@@ -44,7 +44,7 @@ const CardDetails = () => {
         </div>
         <div
           onClick={() => {
-            addBookMark(singleCard);
+            addBookMark(singleCard, toast);
           }}
           className="absolute md:right-10 md:top-10 right-4 top-4 bg-white md:p-3 p-2 bg-opacity-40 rounded-xl text-pink-600 hover:cursor-pointer"
         >
@@ -88,7 +88,7 @@ const CardDetails = () => {
         <div className="mt-6">
           <button
             onClick={() => {
-              addBookMark(singleCard);
+              addBookMark(singleCard, toast);
             }}
             className="btn bg-gradient-to-r from-[#4facfe] to-blue-500 text-white text-xl"
           >
@@ -96,6 +96,7 @@ const CardDetails = () => {
           </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

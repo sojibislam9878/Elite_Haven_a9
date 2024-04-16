@@ -10,28 +10,66 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-40 bg-white">
       <div className="navbar bg-base-100 container mx-auto p-4 ">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className=" menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/bookmark"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Book Mark
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/updateProfile"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Update Profile
+                </NavLink>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex={0}
-            className=" menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52"
-          >
+          <Link to="/" className="btn btn-ghost text-3xl font-garamond">
+            Elite Haven
+          </Link>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
             <li>
               <NavLink
                 to="/"
@@ -50,6 +88,12 @@ const Navbar = () => {
                 }
               >
                 Book Mark
+                <sup>
+                  <span>{estateCardLS.length}</span>
+                  <span className="material-symbols-outlined text-sm font-bold">
+                    bookmark_added
+                  </span>
+                </sup>
               </NavLink>
             </li>
             <li>
@@ -64,82 +108,47 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-3xl font-garamond">Elite Haven</Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/bookmark"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Book Mark
-              <sup>
-                <span>{estateCardLS.length}</span>
-                <span className="material-symbols-outlined text-sm font-bold">
-                  bookmark_added
-                </span>
-              </sup>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/updateProfile"
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Update Profile
-            </NavLink>
-          </li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        {user ? (
-          <div className="flex  items-center gap-2">
-            <div
-              className="flex tooltip tooltip-bottom z-[10]"
-              data-tip={user.displayName || "Unknown"}
-            >
+        <div className="navbar-end">
+          {user ? (
+            <div className="flex  items-center gap-2">
               <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
+                className="flex tooltip tooltip-bottom z-[10]"
+                data-tip={user.displayName || "Unknown"}
               >
-                <div className="w-20 rounded-full">
-                  <Link to="/updateprofile">
-                  <img
-                    alt="profile picture"
-                    src={
-                      user.photoURL || "https://i.ibb.co/4SrK9pD/profile.jpg"
-                    }
-                  />
-                  </Link>
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-20 rounded-full">
+                    <Link to="/updateprofile">
+                      <img
+                        alt="profile picture"
+                        src={
+                          user.photoURL ||
+                          "https://i.ibb.co/4SrK9pD/profile.jpg"
+                        }
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
+              <button
+                onClick={logout}
+                className="btn bg-blue-500 text-white font-bold hover:bg-blue-700 hidden md:flex"
+              >
+                Logout
+              </button>
             </div>
-            <button
-              onClick={logout}
-              className="btn bg-blue-500 text-white font-bold hover:bg-blue-700 hidden md:flex"
-            >
-              Logout
-            </button>
-          </div>
-        ) : (
-          <Link to="/login ">
-            <button className="btn bg-blue-500 text-white font-bold hover:bg-blue-700">
-              Login
-            </button>
-          </Link>
-        )}
+          ) : (
+            <Link to="/login">
+              <button className="btn bg-blue-500 text-white font-bold hover:bg-blue-700">
+                Login
+              </button>
+            </Link>
+          )}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

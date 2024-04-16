@@ -27,13 +27,19 @@ const Footer = () => {
           <div className="mt-8">
             <h1 className="text-2xl font-semibold">Useful Links</h1>
             <Link to="/">
-              <h6 className="font-semibold opacity-80 hover:opacity-100 hover:underline">Home</h6>
+              <h6 className="font-semibold opacity-80 hover:opacity-100 hover:underline">
+                Home
+              </h6>
             </Link>
             <Link to="/bookmark">
-              <h6 className="font-semibold opacity-80 hover:opacity-100 hover:underline">Book Mark</h6>
+              <h6 className="font-semibold opacity-80 hover:opacity-100 hover:underline">
+                Book Mark
+              </h6>
             </Link>
             <Link to="/updateprofile">
-              <h6 className="font-semibold opacity-80 hover:opacity-100 hover:underline">Update Profile</h6>
+              <h6 className="font-semibold opacity-80 hover:opacity-100 hover:underline">
+                Update Profile
+              </h6>
             </Link>
           </div>
         </div>

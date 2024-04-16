@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -37,9 +37,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <PrivetRoute>
-          <CardDetails></CardDetails>,
-        </PrivetRoute>
+        element: (
+          <PrivetRoute>
+            <CardDetails></CardDetails>,
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/bookmark/details/:id",
+        element: (
+          <PrivetRoute>
+            <CardDetails></CardDetails>,
+          </PrivetRoute>
+        ),
       },
       {
         path: "/bookmark",

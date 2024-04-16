@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Registion = () => {
   const { user } = useAuth();
   console.log(user);
@@ -27,7 +27,7 @@ const Registion = () => {
   // create profile and update user
   const onSubmit = (data) => {
     const { email, password, name, photo } = data;
-    createUserWithEmail(email, password , toast).then(() => {
+    createUserWithEmail(email, password, toast).then(() => {
       updateUser(name, photo);
       navigate(form);
     });

@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const Locations = useLocation();
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Login = () => {
         navigate(Locations?.state ? Locations.state : "/");
       })
       .catch(() => {
-        toast.error('Worng email or password! check again', {
+        toast.error("Wrong email or password! check again", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -30,14 +30,17 @@ const Login = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-          });
+        });
       });
   };
+
+  
 
   const [isHide, setIsHide] = useState(false);
   const handleHide = () => {
     setIsHide(!isHide);
   };
+  
   return (
     <div>
       <div className="flex justify-center p-4 mt-10">
@@ -111,7 +114,7 @@ const Login = () => {
             </button>
           </div>
         </div>
-      <ToastContainer />
+        <ToastContainer />
       </div>
     </div>
   );

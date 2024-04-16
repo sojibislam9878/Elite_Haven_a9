@@ -15,10 +15,10 @@ import { auth } from "../../firebase/FirebaseConfig";
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   // create user
-  const createUserWithEmail = (email, password , toast) => {
+  const createUserWithEmail = (email, password, toast) => {
     setLoading(true);
     if (password.length < 6) {
-      return toast.warn('Password must be at least 6 characters long', {
+      return toast.warn("Password must be at least 6 characters long", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -27,10 +27,10 @@ const AuthProvider = ({ children }) => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     }
     if (!/^(?=.*[a-z]).*$/.test(password)) {
-      return toast.warn('Password must contain a lowercase letter', {
+      return toast.warn("Password must contain a lowercase letter", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -39,10 +39,10 @@ const AuthProvider = ({ children }) => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     }
     if (!/^(?=.*[A-Z]).*$/.test(password)) {
-      return toast.warn('Password must contain a uppercase letter', {
+      return toast.warn("Password must contain a uppercase letter", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -51,9 +51,9 @@ const AuthProvider = ({ children }) => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     }
-    toast.success('Account created successfuly', {
+    toast.success("Account created successfuly", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -62,25 +62,25 @@ const AuthProvider = ({ children }) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-      });
+    });
     return createUserWithEmailAndPassword(auth, email, password);
-    
   };
-// update user 
-   const updateUser=(name, photo)=>{
+  // update user
+  const updateUser = (name, photo) => {
     updateProfile(auth.currentUser, {
-      displayName:name, photoURL: photo
-    })
+      displayName: name,
+      photoURL: photo,
+    });
     // .then(() => {
-      // Profile updated!
-      // ...
+    // Profile updated!
+    // ...
     // }).catch((error) => {
-      // An error occurred
-      // ...
+    // An error occurred
+    // ...
     // });
-   }
-  //  reload 
-// loading
+  };
+  
+  // loading
   const [loading, setLoading] = useState(true);
   //   user
   const [user, setUser] = useState(null);
@@ -114,14 +114,12 @@ const AuthProvider = ({ children }) => {
   const githubProvider = new GithubAuthProvider();
 
   const googleSignUP = () => {
-    signInWithPopup(auth, googleProvider).then(()=>{
-    })
+    signInWithPopup(auth, googleProvider)
   };
   const githubSignUP = () => {
-    signInWithPopup(auth, githubProvider).then(()=>{
-    })
+    signInWithPopup(auth, githubProvider)
   };
-  
+
   // values
   const values = {
     createUserWithEmail,
