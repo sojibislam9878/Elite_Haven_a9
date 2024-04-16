@@ -132,7 +132,7 @@ const Home = () => {
       {/* luxury estate section */}
       <div className="container mx-auto p-4">
         {/* section header  */}
-        <div data-aos="fade-up" className="text-center md:mt-32 mt-6 border-b-2 border-dashed pb-6">
+        <div data-aos="fade-up" data-aos-duration="800" className="text-center md:mt-32 mt-6 border-b-2 border-dashed pb-6">
           <h1 className="text-4xl font-extrabold font-garamond ">
             Luxury Estates
           </h1>

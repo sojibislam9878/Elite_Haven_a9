@@ -1,8 +1,14 @@
-# React + Vite
+# Elite Haven
+Here is website live URL-->https://sojibislam9878-assignment9.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Features and characteristics
+* This website is responsive for mobile, tab and desktop.
+* This website has login and signup option.
+* It's SPA (Single page application).
+* On this website uses React Toast for Better experience.
+* This website uses some animations to make it look better.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# NPM package used in this website
+1. [AOS Package](https://www.npmjs.com/package/aos)
+2. [React Hook Form](https://react-hook-form.com/)
+3. [Swiper Slider](https://swiperjs.com/)

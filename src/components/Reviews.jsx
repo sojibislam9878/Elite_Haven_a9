@@ -12,7 +12,7 @@ const Reviews = () => {
         <div className="">
             {/* review */}
           <div className="md:mt-32 mt-10">
-            <div data-aos="fade-up" className="text-center pb-6 border-b-2 border-dashed">
+            <div data-aos="fade-up" data-aos-duration="800" className="text-center pb-6 border-b-2 border-dashed">
               <h3 className="text-4xl font-extrabold font-garamond">Latest Reviews</h3>
               <p className="opacity-80 leading-7 mt-6">check out other people experiences with our service</p>
             </div>
