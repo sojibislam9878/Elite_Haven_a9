@@ -3,7 +3,7 @@ const FAQSection = () => {
     <div className="container mx-auto p-4">
       <div className="md:mt-32 mt-6">
         {/* title  */}
-        <div className="text-center pb-6 border-b-2 border-dashed">
+        <div data-aos="fade-up" className="text-center pb-6 border-b-2 border-dashed">
           <h3 className="text-4xl font-extrabold font-garamond">FAQ</h3>
           <p className="opacity-80 leading-7 mt-6">
           Find quick answers to common questions about Luxury Estates services and properties.
