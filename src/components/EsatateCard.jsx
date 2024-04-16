@@ -6,13 +6,12 @@ const EsatateCard = ({ card }) => {
   return (
     <Link to={`details/${id}`}>
       <div
-        data-aos={id % 2 === 0 ? "flip-left" : "flip-right"}
         // data-aos="zoom-in-up"
-        // data-aos-duration="1000"
+        // data-aos-easing="ease-out-cubic"
+        // data-aos-duration="600"
         // data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-delay="300"
-     data-aos-duration="1500"
+        data-aos={id % 2 === 0 ? "flip-left" : "flip-right"}
+        data-aos-duration="1000"
         className="card card-compact bg-base-100 shadow-xl h-full"
       >
         <figure>

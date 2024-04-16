@@ -40,7 +40,7 @@ const CardDetails = () => {
         className=" w-full md:h-[40rem] h-[25rem] lg:h-[43.75rem] mx-auto rounded-xl object-cente relative"
       >
         <div className="flex justify-center items-center h-full">
-          <h1 className="text-white text-4xl font-bold">{segment_name}</h1>
+          <h1 className="text-white text-4xl font-bold text-center">{segment_name}</h1>
         </div>
         <div
           onClick={() => {

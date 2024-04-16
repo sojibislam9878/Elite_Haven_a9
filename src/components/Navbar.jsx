@@ -110,7 +110,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="flex  items-center gap-2">
+            <div className="flex  items-center gap-2 pr-2 md:pr-0">
               <div
                 className="flex tooltip tooltip-bottom z-[10]"
                 data-tip={user.displayName || "Unknown"}
